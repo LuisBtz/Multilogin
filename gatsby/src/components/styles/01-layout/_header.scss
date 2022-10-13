@@ -1,0 +1,13 @@
+header {
+    height: 61px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 1000px) {
+        padding: 20px;
+    }
+    .logo {
+        width: 166px;
+    }
+}

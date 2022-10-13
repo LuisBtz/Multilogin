@@ -1,0 +1,38 @@
+.logoVector {
+    margin-top: 100px;
+    @media (max-width: 1000px) {
+        margin-left: 20px;
+    }
+    @media (max-width: 680px) {
+        margin-top: 200px;
+        margin-left: 0;
+    }
+    svg {
+        cursor: pointer;
+        .lineFigure {
+            animation: line 2s ease-in-out infinite forwards;
+        }
+        .figure {
+            transition: all 500ms ease-in-out;
+            stroke: #000;
+        }
+        &:hover {
+            .figure {
+                fill: #0066FF;
+            }
+        }
+    }
+    
+}
+
+@keyframes line {
+    0% {
+      opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+      }
+  }

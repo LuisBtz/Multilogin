@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+    --blue: #0066FF;
+    --black: #000000;
+    --container: 1354px;
+}
+
+.fontLight {
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+}
+
+.fontLightItalic, em, i {
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+}
+
+.headline{
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+}
+
+.bold, strong, b{
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-style: bold;
+}
+    
+body {
+    @extend .fontLight;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    color: var(--black);
+    font-size: 16px;
+    .container {
+        max-width: var(--container);
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+        padding: 0 50px;
+        @media (max-width: 1354px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 1000px) {
+            padding: 0px;
+        }
+    }
+}
+

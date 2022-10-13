@@ -1,0 +1,11 @@
+@use './00-global/Global';
+@use './00-global/Normalizer';
+
+
+@use './01-layout/header';
+@use './01-layout/footer';
+
+@use './02-home/home';
+@use './02-home/newsletter';
+@use './02-home/slider';
+@use './02-home/logo';
