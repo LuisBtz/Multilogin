@@ -1,9 +1,27 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delay: 0,
+        duration: 1,
+      }
+    }
+  }
 
 
 const Logo = () => {
     return(
-        <div className="logoVector">
+        <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className='logoVector'
+      >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191.49 291.05">
                 <g id="Capa_2" data-name="Capa 2">
                     <g id="capa1" data-name="Capa 1">
@@ -32,7 +50,7 @@ const Logo = () => {
 
 
             </svg> 
-        </div>
+        </motion.div>
     )
 }
 

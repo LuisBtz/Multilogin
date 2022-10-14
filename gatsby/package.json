@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "framer-motion": "^7.5.3",
     "gatsby": "^4.24.4",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-mailchimp": "^5.2.2",

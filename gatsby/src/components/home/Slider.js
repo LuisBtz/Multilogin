@@ -2,10 +2,27 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+        duration: 2,
+      }
+    }
+  }
 
 const Slider = () => {
     return(
-        <div className="slider">
+        <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className='slider'
+      >
             <Carousel
                 autoPlay={false}
                 controls={true}
@@ -24,7 +41,7 @@ const Slider = () => {
                         </div>
                         <div className="text">
                             <p>“Virtual machines just weren't feasible. The process was 'hope and pray' they don't ban you. So I realized I needed something to protect us.”</p>
-                            <strong>Nulla vitae elit libero, a pharetra augue mollis interdum.</strong>
+                            <strong>Adam, Owner, Rocket 31</strong>
                         </div>
                     </div>
                     <div className="item">
@@ -39,7 +56,7 @@ const Slider = () => {
                         </div>
                         <div className="text">
                             <p>“Virtual machines just weren't feasible. The process was 'hope and pray' they don't ban you. So I realized I needed something to protect us.”</p>
-                            <strong>Nulla vitae elit libero, a pharetra augue mollis interdum.</strong>
+                            <strong>Adam, Owner, Rocket 31</strong>
 
                         </div>
                     </div>
@@ -58,7 +75,7 @@ const Slider = () => {
                         </div>
                         <div className="text">
                             <p>“Virtual machines just weren't feasible. The process was 'hope and pray' they don't ban you. So I realized I needed something to protect us.”</p>
-                            <strong>Nulla vitae elit libero, a pharetra augue mollis interdum.</strong>
+                            <strong>Adam, Owner, Rocket 31</strong>
                         </div>
                     </div>
                     <div className="item">
@@ -73,7 +90,7 @@ const Slider = () => {
                         </div>
                         <div className="text">
                             <p>“Virtual machines just weren't feasible. The process was 'hope and pray' they don't ban you. So I realized I needed something to protect us.”</p>
-                            <strong>Nulla vitae elit libero, a pharetra augue mollis interdum.</strong>
+                            <strong>Adam, Owner, Rocket 31</strong>
 
                         </div>
                     </div>
@@ -82,7 +99,7 @@ const Slider = () => {
 
                 
             </Carousel>
-        </div>
+        </motion.div>
     )
 }
 

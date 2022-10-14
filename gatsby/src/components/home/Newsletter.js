@@ -1,8 +1,22 @@
 import React from 'react'
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import { motion } from "framer-motion";
 
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 2,
+    }
+  }
+}
 
 class Newsletter extends React.Component {
+
+  
 
     constructor() {
       super()
@@ -41,11 +55,18 @@ class Newsletter extends React.Component {
     handleNameChange = event => {
       this.setState({ name: event.target.value })
     }
+
+    
   
     render() {
   
       return (
-        <div className='newsletter'>
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className='newsletter'
+        >
             <h1 className='meta'>Claim the offer</h1>
   
           <p>{this.state.message}</p>
@@ -67,7 +88,7 @@ class Newsletter extends React.Component {
               </form>
           </div>
   
-        </div>
+        </motion.div>
   
       )
     }
